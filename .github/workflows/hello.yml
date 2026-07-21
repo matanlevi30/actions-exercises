@@ -1,0 +1,19 @@
+name: Hello Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Print current date and time
+        run: date
+
+      - name: Print current branch
+        run: echo "Branch: ${{ github.ref_name }}"
